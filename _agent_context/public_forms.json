@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "reiseplanung",
+      "app_id": "6a0f4fcdec66e03d639ee8a3",
+      "path": "/rest/apps/6a0f4fcdec66e03d639ee8a3/records",
+      "allowed_fields": [
+        "reiseziel",
+        "reisebeschreibung",
+        "startdatum",
+        "enddatum",
+        "anzahl_reisende",
+        "gesamtbudget",
+        "waehrung",
+        "notizen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Reiseplanung — Formular"
+    },
+    {
+      "entity": "ausgabenkategorien",
+      "app_id": "6a0f4fd4d37bb65dc3e2470c",
+      "path": "/rest/apps/6a0f4fd4d37bb65dc3e2470c/records",
+      "allowed_fields": [
+        "budgetanteil",
+        "kategoriename",
+        "kategorie_icon",
+        "kategorie_beschreibung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Ausgabenkategorien — Formular"
+    },
+    {
+      "entity": "budgetposten",
+      "app_id": "6a0f4fd5f913a3aa3d026472",
+      "path": "/rest/apps/6a0f4fd5f913a3aa3d026472/records",
+      "allowed_fields": [
+        "bezeichnung",
+        "geplanter_betrag",
+        "tatsaechlicher_betrag",
+        "ausgabendatum",
+        "zahlungsart",
+        "bereits_bezahlt",
+        "beleg_vorhanden",
+        "anmerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Budgetposten — Formular"
+    }
+  ]
+}

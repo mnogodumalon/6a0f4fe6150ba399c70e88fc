@@ -1,0 +1,5 @@
+- Reiseplanung (reiseplanung): reiseziel[string/text], reisebeschreibung[string/textarea], startdatum[date/date], enddatum[date/date], anzahl_reisende[number], gesamtbudget[number], waehrung[lookup/select], notizen[string/textarea]
+- Ausgabenkategorien (ausgabenkategorien): budgetanteil[number], kategoriename[string/text], kategorie_icon[lookup/select], kategorie_beschreibung[string/textarea]
+- Budgetposten (budgetposten): reise[applookup/select], kategorie[applookup/select], bezeichnung[string/text], geplanter_betrag[number], tatsaechlicher_betrag[number], ausgabendatum[date/date], zahlungsart[lookup/select], bereits_bezahlt[bool], beleg_vorhanden[bool], beleg_datei[file], anmerkungen[string/textarea]
+  → reise links to app_id 6a0f4fcdec66e03d639ee8a3
+  → kategorie links to app_id 6a0f4fd4d37bb65dc3e2470c
