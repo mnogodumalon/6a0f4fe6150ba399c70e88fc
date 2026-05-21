@@ -148,6 +148,30 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Intent Workflows */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/reise-planen" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconPlane size={20} className="text-primary" stroke={1.5} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-sm text-foreground truncate">Reise planen</p>
+            <p className="text-xs text-muted-foreground truncate">Budgetposten nach Kategorien erfassen</p>
+          </div>
+          <IconChevronRight size={16} className="shrink-0 text-muted-foreground" />
+        </a>
+        <a href="#/intents/reise-abrechnung" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconReceipt size={20} className="text-primary" stroke={1.5} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-sm text-foreground truncate">Reise abrechnen</p>
+            <p className="text-xs text-muted-foreground truncate">Tatsächliche Ausgaben erfassen & Belege prüfen</p>
+          </div>
+          <IconChevronRight size={16} className="shrink-0 text-muted-foreground" />
+        </a>
+      </div>
+
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>

@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import ReiseplanungPage from '@/pages/ReiseplanungPage';
 import AusgabenkategorienPage from '@/pages/AusgabenkategorienPage';
@@ -17,6 +16,8 @@ import PublicFormBudgetposten from '@/pages/public/PublicForm_Budgetposten';
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const ReisePlanenPage = lazy(() => import('@/pages/intents/ReisePlanenPage'));
+const ReiseAbrechnungPage = lazy(() => import('@/pages/intents/ReiseAbrechnungPage'));
 // </custom:imports>
 
 export default function App() {
@@ -32,12 +33,14 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="reiseplanung" element={<ReiseplanungPage />} />
                 <Route path="ausgabenkategorien" element={<AusgabenkategorienPage />} />
                 <Route path="budgetposten" element={<BudgetpostenPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/reise-planen" element={<Suspense fallback={null}><ReisePlanenPage /></Suspense>} />
+                <Route path="intents/reise-abrechnung" element={<Suspense fallback={null}><ReiseAbrechnungPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
